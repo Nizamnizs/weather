@@ -1,7 +1,7 @@
 const wrapper = document.querySelector(".wrapper");
 const inputPart = document.querySelector(".input-part");
 const infoTxt = inputPart.querySelector(".info-txt");
-const locationBtn = inputPart.querySelector("button");
+// const locationBtn = inputPart.querySelector("button");
 const inputField = inputPart.querySelector("input");
 const weatherPart = wrapper.querySelector(".weather-part");
 const wIcon = weatherPart.querySelector("img");
@@ -22,13 +22,13 @@ inputField.addEventListener("keyup", (e) => {
   }
 });
 
-locationBtn.addEventListener("click", () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
-  } else {
-    alert("Your browser does not support geolocation API");
-  }
-});
+// locationBtn.addEventListener("click", () => {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(onSuccess, onError);
+//   } else {
+//     alert("Your browser does not support geolocation API");
+//   }
+// });
 
 function requestApi(city) {
   api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5fe36b192ffd1c36dffb6752bc1722b2`;
