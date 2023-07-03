@@ -6,8 +6,15 @@ const inputField = inputPart.querySelector("input");
 const weatherPart = wrapper.querySelector(".weather-part");
 const wIcon = weatherPart.querySelector("img");
 const arrowBack = wrapper.querySelector("header i");
-
+const searchBtn = inputPart.querySelector(".search-btn");
 let api;
+
+
+searchBtn.addEventListener("click", () => {
+  if (inputField.value !== "") {
+    requestApi(inputField.value);
+  }
+});
 
 inputField.addEventListener("keyup", (e) => {
   if (e.key === "Enter" && inputField.value !== "") {
